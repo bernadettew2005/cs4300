@@ -1,7 +1,18 @@
 # Task 4: Functions and Duck Typing
 
+def calculate_discount(price, discount):
+    temp = (price*discount) / 100
+    total = price - temp
+    
+    return round(total, 2)
+
 def main():
-    my_number = 1
+    original_price = 56.89
+    discount = 10.6
+    final_price = calculate_discount(original_price, discount)    
+    print(f"original price: ${original_price:.2f}")
+    print(f"discount: {discount}% off")
+    print(f"final price: ${final_price:.2f}")
 
 if __name__ == "__main__":
     main()
