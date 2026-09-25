@@ -1,5 +1,6 @@
 # Task 1: Introduction to Python and Testing
 
+# hello() prints "Hello, World!"
 def hello():
     print("Hello, World!")
 

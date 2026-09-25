@@ -1,5 +1,6 @@
 # Task 5: Lists and Dictionaries
 
+# list of favorite books
 favorite_books = [
     ("Matched", "Ally Condie"),
     ("Legend", "Marie Lu"),
@@ -8,6 +9,7 @@ favorite_books = [
     ("The Book Thief", "Markus Zusak"),
 ]
 
+# dictionary of students
 student_database = {
     "Braelynn": "26591",
     "Tyler": "46512",
@@ -15,6 +17,7 @@ student_database = {
     "Naomi": "98415",
 }
 
+# print first 3 books in list and every student in the dictionary
 def main():
     print("First 3 books in list:")
     print(favorite_books[0:3])
