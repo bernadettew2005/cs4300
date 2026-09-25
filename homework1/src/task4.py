@@ -1,7 +1,7 @@
 # Task 4: Functions and Duck Typing
 
-# calculate the discount, for example, can take in float or int
 def calculate_discount(price, discount):
+    """calculate the discount, for example, can take in float or int"""
     temp = (price*discount) / 100
     total = price - temp
     

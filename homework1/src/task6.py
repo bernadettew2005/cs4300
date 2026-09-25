@@ -1,7 +1,7 @@
 # Task 6: File Handling
 
-# count the words in a file
 def count_words(filename):
+    """count the words in a file"""
     with open(filename, 'r') as file:
         text = file.read()
     words_list = text.split()

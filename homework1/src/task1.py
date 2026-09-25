@@ -1,7 +1,7 @@
 # Task 1: Introduction to Python and Testing
 
-# hello() prints "Hello, World!"
 def hello():
+    """hello() prints "Hello, World!"""
     print("Hello, World!")
 
 def main():

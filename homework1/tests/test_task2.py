@@ -11,5 +11,6 @@ from src.task2 import get_int, get_float, get_string, get_bool
 ])
 
 def test_data_types(function, expected_type):
+    """test the datatype functions"""
     result = function()
     assert type(result) is expected_type

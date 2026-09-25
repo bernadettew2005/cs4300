@@ -15,6 +15,7 @@ def test_favorite_books():
 ])
 
 def test_first_three_books(index, expected_book):
+    """test that the books are correct"""
     assert favorite_books[index] == expected_book
 
 @pytest.mark.parametrize("student, student_id", [
@@ -25,4 +26,5 @@ def test_first_three_books(index, expected_book):
 ])
 
 def test_student_database(student, student_id):
+    """test that the students are correct"""
     assert student_database[student] == student_id

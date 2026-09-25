@@ -9,4 +9,5 @@ from src.task7 import get_website_status
 ])
 
 def test_get_website_status(url, expected_status):
+    """test the get_website_status function"""
     assert get_website_status(url) == expected_status

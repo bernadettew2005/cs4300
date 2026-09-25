@@ -11,4 +11,5 @@ from src.task4 import calculate_discount
 ])
 
 def test_calculate_discount(price, discount, expected):
+    """test the calculate_discount function"""
     assert calculate_discount(price, discount) == pytest.approx(expected)

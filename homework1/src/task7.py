@@ -2,8 +2,8 @@
 
 import requests
 
-# send a request to the url and return the response status code
 def get_website_status(url):
+    """send a request to the url and return the response status code"""
     response = requests.get(url) # send GET request to url, save response
     return response.status_code
 

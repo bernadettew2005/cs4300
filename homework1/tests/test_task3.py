@@ -12,10 +12,12 @@ from src.task3 import is_positive, print_primes, print_hundred_sum
 ])
 
 def test_is_positive(number, expected):
+    """test the is_positive function"""
     result = is_positive(number)
     assert result == expected
 
 def test_print_primes(capsys):
+    """test the print_primes function"""
     print_primes()
 
     captured = capsys.readouterr()
@@ -23,6 +25,7 @@ def test_print_primes(capsys):
     assert captured.out == "2\n3\n5\n7\n11\n13\n17\n19\n23\n29\n"
 
 def test_print_hundred_sum(capsys):
+    """test the print_hundred_sum function"""
     print_hundred_sum()
 
     captured = capsys.readouterr()

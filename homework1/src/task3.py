@@ -1,7 +1,7 @@
 # Task 3: Control Structures 
 
-# checks if a number is positive, negative, or 0
 def is_positive(number):
+    """checks if a number is positive, negative, or 0"""
     if number > 0:
         return "positive"
     elif number < 0:
@@ -9,8 +9,8 @@ def is_positive(number):
     else:
         return "0"
 
-# determines if a number is prime and prints the first 10 positive prime numbers
 def print_primes():
+    """determines if a number is prime and prints the first 10 positive prime numbers"""
     count = 0
     number = 2
     primes = []
@@ -35,8 +35,8 @@ def print_primes():
     for prime in primes:
         print(prime)
 
-# calculate the sum from 1 to 100 and print it
 def print_hundred_sum():
+    """calculate the sum from 1 to 100 and print it"""
     total = 0
     number = 1
 
