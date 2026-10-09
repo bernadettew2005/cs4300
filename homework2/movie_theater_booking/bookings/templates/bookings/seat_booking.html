@@ -1,0 +1,76 @@
+{% extends 'bookings/base.html' %}
+
+{% block title %}Book Your Seats{% endblock %}
+
+{% block content %}
+
+<div class="mb-4">
+    <h1 class="fw-bold">Book Your Seats</h1>
+    <p class="text-secondary">
+        Select an available seat for {{ movie.title }}.
+    </p>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h4 class="fw-bold">{{ movie.title }}</h4>
+
+        <div class="bg-secondary text-white text-center rounded p-2 mb-4">
+            SCREEN
+        </div>
+
+        <div class="row g-3 justify-content-center mb-4">
+            {% for seat in seats %}
+                <div class="col-4 col-sm-3 col-md-2">
+                    <div class="border rounded p-2 text-center bg-success-subtle">
+                        <span class="fw-bold">{{ seat.seat_number }}</span>
+                        <small class="d-block text-success">Available</small>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="col-12">
+                    <p class="text-secondary text-center">
+                        No seats are available.
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if seats %}
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="seat" class="form-label">
+                        Choose a seat
+                    </label>
+
+                    <select name="seat" id="seat" class="form-select" required>
+                        <option value="">Select an available seat</option>
+                        {% for seat in seats %}
+                            <option value="{{ seat.id }}">
+                                {{ seat.seat_number }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Confirm Booking
+                </button>
+            </form>
+        {% endif %}
+    </div>
+</div>
+
+<a href="{% url 'movie_list' %}" class="btn btn-outline-secondary">
+    Back to Movies
+</a>
+
+{% endblock %}
